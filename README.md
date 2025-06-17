@@ -1,11 +1,13 @@
 # Argos translate model licenses
 
-Data here is colected from README.md of each model
+Listing of the sources used in the Argos translate models, and their respective licenses. Sources listed here are colected from README.md of each model.
 
 Columns that come from https://www.argosopentech.com/argospm/index/ : From,To,Download,From code,To code,Package version,Argos version,zip name
 
 Columns that come from model’s README.md: Open Subtitles, UNPC, ...
-Below this column name there is license restriction that I found in the documentation of the respective data source.
+Below name of the source (for example "Open Subtitles") there is license restriction that I found in the documentation of the respective data source (for example that citing of source is required).
+
+After this table there is description of sources.
  
 |  |  |  |  |  |  |  |  | Open Subtitles | UNPC | Stanza | OPUS | ParaCrawl | WikiExtract | WikiMatrix | Beyond | Common Crawl | CCMatrix | CCAligned | EU Bookshop | OPUS-MT | Gourmet | OPUS DGT | OPUS EOPC | other|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -104,3 +106,213 @@ Below this column name there is license restriction that I found in the document
 | Turkish | English | get | tr | en | 1.5 | 1.5 | translate-tr_en-1_5 |  |  | x | x |  | x |  |  |  |  |  |  |  |  |  |  | emnlp-2020-main|
 | Ukrainian | English | get | uk | en | 1.9 | 1.9.0 | uk_en |  |  | x | x |  | x | x |  |  |  | x |  |  |  |  |  | |
 | Urdu | English | get | ur | en | 1.9 | 1.9 | ur_en |  |  |  |  |  |  |  |  |  |  |  |  | x |  |  |  | |
+
+# Sources
+
+## Source notes
+
+Sources where license is not clear: OPUS (O?), Beyond (B?), CommonCrawl (C?), wolk_marasek_building_2014, el-kishky-etal-2021-xlent, emnlp-2020-main, NODALIDA 2017, reimers-gurevych-2020-making
+
+Sources that are not free (non-commercial, research only): QED (research only,cite), TED2013 (BY-NC-ND), TED2020(BY-NC-ND)
+
+Some of these non-clear and non-free are also part of OPUS corpora, thus could be used in data source "OPUS".
+
+## Source list
+
+OPUS (O?, citing)
+	Trained on data from the Opus.
+	
+	Broad, unknown datasets from OPUS. It is not clear which models of the corpora were used; thus it is not clear what is license restriction of used data.
+	Would be helpful to gather all licenses of all sources to find the 'most strict license'.
+
+	Please, cite the following LREC 2012 paper when using OPUS and also acknowledge corpus-specific references as specified in the resource-specific information and documentation! 
+	tiedemann-2012-parallel = https://aclanthology.org/L12-1246/
+
+OPUS OpenSubtitles (citing)
+	Trained on [OpenSubtitles](opus.nlpl.eu/OpenSubtitles.php)
+	
+	https://opus.nlpl.eu/OpenSubtitles/corpus/version/OpenSubtitles
+	Please cite the following article if you use any part of the corpus in your own work:
+	P. Lison and J. Tiedemann, 2016, OpenSubtitles2016: Extracting Large Parallel Corpora from Movie and TV Subtitles. In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)
+	https://aclanthology.org/L16-1147/
+	"We only offer files that we believe we are free to redistribute"
+	
+OPUS UNPC (public domain)
+	[UNPC](http://opus.nlpl.eu/UNPC.php) parallel corpuses compiled by [Opus](http://opus.nlpl.eu/index.php)
+	
+	United Nations Parallel Corpus
+	https://opus.nlpl.eu/UNPC/corpus/version/UNPC
+	For references, please cite this reference: Ziemski, M., Junczys-Dowmunt, M., and Pouliquen, B., (2016), The United Nations Parallel Corpus, Language Resources and Evaluation (LREC’16), Portorož, Slovenia, May 2016. https://cms.unov.org/UNCorpus/Content/Doc/un.pdf
+	"We only offer files that we believe we are free to redistribute"
+	https://www.un.org/dgacm/en/content/uncorpus = public domain
+
+OPUS ParaCrawl (CC0)
+	https://paracrawl.eu/
+	Please, acknowledge the ParaCrawl project at http://paracrawl.eu. This version is derived from the original release at their website adjusted for redistribution via the OPUS corpus collection. Please, acknowledge OPUS as well for this service. 
+	CC0
+	
+Stanza (Apache 2.0)
+	Includes pretrained models from [Stanza](https://github.com/stanfordnlp/stanza/blob/master/LICENSE).
+
+	https://github.com/stanfordnlp/stanza/blob/main/LICENSE => Apache 2.0
+
+Wiktextract (CC-BY-SA,GFDL)
+	https://github.com/tatuylonen/wiktextract
+	tool itself: MIT
+
+	https://en.wiktionary.org/wiki/Wiktionary:Copyrights
+	CC-BY-SA + GFDL
+	Permission is granted to copy, distribute and/or modify the text of all Wiktionary entries under the terms of the Creative Commons Attribution-ShareAlike 4.0 International License, and the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. 
+
+WikiMatrix (CC-BY-SA)
+	https://github.com/facebookresearch/LASER/tree/main/tasks/WikiMatrix
+	Credits: Holger Schwenk, Vishrav Chaudhary, Shuo Sun, Hongyu Gong and Paco Guzman, WikiMatrix: Mining 135M Parallel Sentences in 1620 Language Pairs from Wikipedia, arXiv, July 11 2019.
+	CC-BY-SA
+
+Beyond (B?)
+	Beyond English-Centric Multilingual Machine Translation
+	It is not known why this work is credited, what is the dataset source. 
+	It could be that only this credit has to be given due.
+	
+	It is credited at:
+	https://opus.nlpl.eu/CCMatrix/corpus/version/CCMatrix
+	https://opus.nlpl.eu/NLLB/en&ta/v1/NLLB
+		License: ODC-By
+	
+	Paper mentions (but it is not sure that data created from the paper were used):
+		The underlying dataset was mined from CommonCrawl (Apache 2.0)
+
+CCMatrix (citing)
+	CCMatrix: Mining Billions of High-Quality Parallel Sentences on the WEB
+	https://opus.nlpl.eu/CCMatrix/corpus/version/CCMatrix => citing 2 papers
+
+CommonCrawl (C?)
+	https://commoncrawl.org/terms-of-use
+	Complicated, I can't tell so far
+
+CCAligned (citing)
+	CCAligned: A Massive Collection of Cross-Lingual Web-Document Pairs
+	https://aclanthology.org/2020.emnlp-main.480/
+	https://huggingface.co/datasets/ahelk/ccaligned_multilingual
+	https://www.statmt.org/cc-aligned/
+	created from 68 Commoncrawl Snapshots, so referring to ComonCrawl
+
+EUbookshop (citing)
+	https://opus.nlpl.eu/EUbookshop/corpus/version/EUbookshop
+	
+Gourmet (CC0)
+	gourmet project at https://gourmet-project.eu
+	License depends on the used data
+	https://github.com/EdinburghNLP/gourmet-models
+	CC-BY
+	https://opus.nlpl.eu/GoURMET/corpus/version/GoURMET
+	CC0
+
+OPUS DGT (citing)
+	https://joint-research-centre.ec.europa.eu/language-technology-resources/dgt-translation-memory_en#dgt-memory
+	The DGT-TM database is the exclusive property of the European Commission. The Commission cedes its non-exclusive rights free of charge and world-wide for the entire duration of the protection of those rights to the re-user, for all kinds of use which comply with the conditions laid down in the Commission Decision of 12 December 2011 on the re-use of Commission documents, published in Official Journal of the European Union L330 of 14 December 2011, pages 39 to 42.
+	Any re-use of the database or of the structured elements contained in it is required to be identified by the re-user, who is under an obligation to state the source of the documents used: the website address, the date of the latest update and the fact that the European Commission retains ownership of the data.
+	
+	Cite LREC 2012
+
+OPUS EOPC (CC-BY-SA)
+	https://opus.nlpl.eu/EOPC/corpus/version/EOPC
+	cite tiedemann-2012-parallel
+
+	Estonian Open Parallel Corpusd
+	http://metashare.elda.org/repository/browse/estonian-open-parallel-corpus-2014-estonian-english/d12b8c9c7ef111e5aa3b001dd8b71c66bd5c7d10b0664e8490382a9b22f8fa97/
+	CC-BY-SA
+
+Krzysztof Wołk and Krzysztof Marasek: Building Subject-aligned Comparable Corpora and Mining it for Truly Parallel Sentence Pairs., Procedia Technology, 18, Elsevier, p.126-132, 2014
+	https://doi.org/10.1016/j.protcy.2014.11.024
+	wolk_marasek_building_2014
+	Don't know why it is credited
+
+Kashefi, O. (2018). MIZAN: a large persian-english parallel corpus. Computing Research Repository, arXiv:1801.02107.
+	https://arxiv.org/abs/1801.02107
+	https://github.com/omidkashefi/Mizan
+	CC-BY
+	
+El-Kishky, Ahmed and Renduchintala, Adi and Cross, James and Guzmán, Francisco and Koehn, Philipp - XLEnt: Mining Cross-lingual Entities with Lexical-Semantic-Phonetic Word Alignment
+	el-kishky-etal-2021-xlent
+	
+EMNLP 2020
+	El-Kishky, Ahmed and Chaudhary, Vishrav and Guzmán, Francisco and Koehn, Philipp - Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing
+	https://aclanthology.org/2020.emnlp-main.0/
+	emnlp-2020-main
+
+GlobalVoices (citing) 
+	http://opus.nlpl.eu/GlobalVoices-2018Q4.php
+	https://opus.nlpl.eu/GlobalVoices/corpus/version/GlobalVoices
+	https://www.localprobook.com/article/CASMACAT.html
+	Please cite the following article if you use any part of the corpus in your own work: J. Tiedemann, 2012, Parallel Data, Tools and Interfaces in OPUS. In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012) 
+	
+MultiUN (cite)
+	https://opus.nlpl.eu/CCMatrix/corpus/version/MultiUN
+	Please cite MultiUN: A Multilingual corpus from United Nation Documents, Andreas Eisele and Yu Chen, LREC 2010
+	Please cite the following article if you use any part of the corpus in your own work: J. Tiedemann, 2012, Parallel Data, Tools and Interfaces in OPUS. In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012) 
+
+News-Commentary (cite)
+	https://opus.nlpl.eu/News-Commentary/corpus/version/News-Commentary
+	Please cite the following article if you use any part of the corpus in your own work: J. Tiedemann, 2012, Parallel Data, Tools and Interfaces in OPUS. In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012) 
+
+QED (research only,cite)
+	https://opus.nlpl.eu/QED/corpus/version/QED
+	QED Corpus is made public for RESEARCH purpose only.
+	Please cite
+	
+Tatoeba (credit)
+	https://opus.nlpl.eu/Tatoeba/corpus/version/Tatoeba
+	https://tatoeba.org/eng/terms_of_use
+	CC-BY-2.0 FR, cite
+	
+TED2013 (BY-NC-ND)
+	https://opus.nlpl.eu/TED2013/corpus/version/TED2013
+	https://wit3.fbk.eu/
+	BY-NC-ND non-commercial
+	
+TED2020 (BY-NC-ND)
+	https://opus.nlpl.eu/TED2020/corpus/version/TED2020
+	https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy
+	BY-NC-ND non-commercial
+	or, aquiring commercial license
+
+NODALIDA 2017
+	Roberts Rozis, Raivis Skadins, 2017, Tilde MODEL - Multilingual Open Data for EU Languages. Proceedings of the 21th Nordic Conference of Computational Linguistics NODALIDA 2017
+	
+Reimers, Nils and Gurevych, Iryna - Making Monolingual Sentence Embeddings Multilingual using Knowledge Distillation
+	reimers-gurevych-2020-making
+
+OPUS-MT
+	https://github.com/Helsinki-NLP/OPUS-MT-train?tab=readme-ov-file
+	CC-BY 4.0
+	
+# License type notes
+
+Apache 2.0
+	https://snyk.io/articles/apache-license/#apache-license-vs-mit
+	
+	https://www.tldrlegal.com/license/apache-license-2-0-apache-2-0
+	You can do what you like with the software, as long as you include the required notices.
+	
+CC0
+	public
+
+CC-BY
+	credit
+	
+CC-BY-SA
+	Creative Commons Attribution Share Alike
+	https://choosealicense.com/licenses/cc-by-sa-4.0/
+	credit,share with same license
+	
+	https://en.wikipedia.org/wiki/Creative_Commons_license#Drauglis_v._Kappa_Map_Group,_LLC
+	The judge dismissed the case on that count, ruling that the atlas was not a derivative work of the photograph in the sense of the license, but rather a collective work. Since the atlas was not a derivative work of the photograph, Kappa Map Group did not need to license the entire atlas under the CC BY-SA 2.0 license.
+	
+GFDL
+	https://en.wikipedia.org/wiki/GNU_Free_Documentation_License
+	rights to copy, redistribute, and modify
+	
+ODC-By
+	Share, create, adapt, must attribute
+	https://opendatacommons.org/licenses/by/summary/
