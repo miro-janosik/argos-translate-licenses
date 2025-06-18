@@ -316,3 +316,17 @@ GFDL
 ODC-By
 	Share, create, adapt, must attribute
 	https://opendatacommons.org/licenses/by/summary/
+
+# Overview
+
+For these two models I see that they were trained also on data that is for non-commercial and research purposes only from TED talks:
+English-Russian, Russian-English
+One model does not have anything in the README: Spanish-Portugese
+
+For the rest it is complicated:
+
+1) models usually do not provide list of source or license of data, instead they provide needed citations required by source data, which is not always pointing to data. For example they refer to publication emnlp-2020-main which is not pointing to any data.
+
+2) most of models state that they used "Data compiled by Opus" or "OPUS-MT" which may be various data components of OPUS corpora; OPUS contains also non-free data for example TED-talks or WikiMatrix and it is not known if it was or wasn't trained on it; But they state that model data are trained on a permissive license "CC-BY 4.0" so we can expect that it used only free data.
+
+3) about half of language models are trained on WikiExtract, WikiMatrix data which has license CC-BY-SA saying "share with same license" but from my findings this applies only if we would be doing derivative of the work (use models to generate our new models), not when we do "collective work" on top of the models.
